@@ -84,7 +84,7 @@ if [ "$TERM_PROGRAM" = "vscode" ]; then
   code "$MODULE_PATH/$TEMP_DIR/$NEXT_FILE_NAME" || true
 elif [ "$TERMINAL_EMULATOR" = "JetBrains-JediTerm" ]; then
   # If the user is using IntelliJ IDEA's JediTerm, open the file with 'idea' command
-  rustrover "$MODULE_PATH/$TEMP_DIR/$NEXT_FILE_NAME" || idea "$MODULE_PATH/$TEMP_DIR/$NEXT_FILE_NAME" || true
+  idea "$MODULE_PATH/$TEMP_DIR/$NEXT_FILE_NAME"
 fi
 
 read -p "Is it valid? If yes, it will be moved to the refinery folder. (y/n): " is_valid
